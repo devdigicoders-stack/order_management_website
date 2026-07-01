@@ -90,9 +90,9 @@ export const AnalyticsDashboard = () => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
-            <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600">
+            <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600">
               <Package className="w-4 h-4" />
             </div>
             <p className="text-xs font-medium text-gray-500">Total Items</p>
@@ -100,7 +100,7 @@ export const AnalyticsDashboard = () => {
           <p className="text-xl font-semibold text-gray-900">{totalQty}</p>
         </div>
         
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
             <div className="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600">
               <Building2 className="w-4 h-4" />
@@ -110,7 +110,7 @@ export const AnalyticsDashboard = () => {
           <p className="text-xl font-semibold text-gray-900">{new Set(products.map(p => p.company)).size}</p>
         </div>
         
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
             <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600">
               <Users className="w-4 h-4" />
@@ -120,7 +120,7 @@ export const AnalyticsDashboard = () => {
           <p className="text-xl font-semibold text-gray-900">{staff.length}</p>
         </div>
         
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
             <div className="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600">
               <ContainerIcon className="w-4 h-4" />
@@ -130,7 +130,7 @@ export const AnalyticsDashboard = () => {
           <p className="text-xl font-semibold text-gray-900">{containers.length}</p>
         </div>
 
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
             <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
               <Truck className="w-4 h-4" />
@@ -140,7 +140,7 @@ export const AnalyticsDashboard = () => {
           <p className="text-xl font-semibold text-gray-900">{totalDistributed}</p>
         </div>
 
-        <div className="bg-white p-4 rounded-xl shadow-sm border border-gray-200 flex flex-col justify-center">
+        <div className="bg-white p-4 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col justify-center">
           <div className="flex items-center space-x-3 mb-2">
             <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center text-red-600">
               <ClipboardList className="w-4 h-4" />
@@ -154,7 +154,7 @@ export const AnalyticsDashboard = () => {
       {/* Main Charts Row 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Orders by Supplier Bar Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col">
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">Order Volume by Supplier</h2>
           <div className="flex-1 min-h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -170,7 +170,7 @@ export const AnalyticsDashboard = () => {
         </div>
 
         {/* Staff Orders Area Chart */}
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col">
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">Items Ordered per Staff Member</h2>
           <div className="flex-1 min-h-[300px]">
             <ResponsiveContainer width="100%" height="100%">
@@ -196,7 +196,7 @@ export const AnalyticsDashboard = () => {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         
         {/* Container Space Utilization */}
-        <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col">
+        <div className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col">
           <h2 className="text-lg font-semibold text-gray-900 mb-2">Global Container Space</h2>
           <p className="text-xs text-gray-500 mb-6">Total Cuft utilization across all active containers.</p>
           <div className="flex-1 min-h-[250px] flex items-center justify-center relative">
@@ -236,7 +236,7 @@ export const AnalyticsDashboard = () => {
         </div>
 
         {/* Top 5 Ordered Products */}
-        <div className="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm border border-gray-200 flex flex-col">
+        <div className="lg:col-span-2 bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col">
           <h2 className="text-lg font-semibold text-gray-900 mb-6">Top 5 Most Ordered Products</h2>
           <div className="flex-1 min-h-[250px]">
             <ResponsiveContainer width="100%" height="100%">

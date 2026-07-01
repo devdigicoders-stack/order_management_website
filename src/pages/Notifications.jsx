@@ -10,7 +10,7 @@ export const Notifications = () => {
 
   const getIcon = (message) => {
     if (message.toLowerCase().includes('approved')) return <CheckCircle className="w-5 h-5 text-green-500" />;
-    if (message.toLowerCase().includes('container')) return <Truck className="w-5 h-5 text-blue-500" />;
+    if (message.toLowerCase().includes('container')) return <Truck className="w-5 h-5 text-indigo-500" />;
     if (message.toLowerCase().includes('distributed')) return <Package className="w-5 h-5 text-orange-500" />;
     return <Info className="w-5 h-5 text-gray-500" />;
   };
@@ -24,7 +24,7 @@ export const Notifications = () => {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 overflow-x-auto overflow-hidden">
         {notifications.length === 0 ? (
           <div className="p-12 text-center flex flex-col items-center">
             <Bell className="w-12 h-12 text-gray-300 mb-4" />
@@ -38,7 +38,7 @@ export const Notifications = () => {
                 key={notification.id} 
                 className={clsx(
                   "p-4 hover:bg-gray-50 transition-colors flex items-start space-x-4",
-                  !notification.read ? "bg-blue-50/30" : "bg-white"
+                  !notification.read ? "bg-indigo-50/30" : "bg-white"
                 )}
               >
                 <div className="flex-shrink-0 mt-1">
@@ -53,7 +53,7 @@ export const Notifications = () => {
                 {!notification.read && (
                   <button 
                     onClick={() => markNotificationRead(notification.id)}
-                    className="flex-shrink-0 flex items-center justify-center text-blue-600 hover:text-blue-800 p-1.5 hover:bg-blue-100 rounded-full transition-colors"
+                    className="flex-shrink-0 flex items-center justify-center text-indigo-600 hover:text-indigo-800 p-1.5 hover:bg-indigo-100 rounded-full transition-colors"
                     title="Mark as read"
                   >
                     <Check className="w-4 h-4" />

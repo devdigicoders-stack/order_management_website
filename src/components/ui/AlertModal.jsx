@@ -27,7 +27,7 @@ export const AlertModal = ({
         </button>
 
         <div className="bg-white px-6 pt-8 pb-6 text-center">
-          <div className={`mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-4 ${isSuccess ? 'bg-green-100 text-green-600' : 'bg-blue-100 text-blue-600'}`}>
+          <div className={`mx-auto flex items-center justify-center h-16 w-16 rounded-full mb-4 ${isSuccess ? 'bg-green-100 text-green-600' : 'bg-indigo-100 text-indigo-600'}`}>
             {isSuccess ? <CheckCircle className="h-8 w-8" /> : <Info className="h-8 w-8" />}
           </div>
           
@@ -45,7 +45,7 @@ export const AlertModal = ({
               className={`w-full px-4 py-2.5 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-colors ${
                 isSuccess 
                   ? 'bg-green-600 hover:bg-green-700 focus:ring-green-500' 
-                  : 'bg-blue-600 hover:bg-blue-700 focus:ring-blue-500'
+                  : 'bg-indigo-600 hover:bg-indigo-700 focus:ring-indigo-500'
               }`}
             >
               {buttonText}

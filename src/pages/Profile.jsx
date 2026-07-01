@@ -56,12 +56,12 @@ export const Profile = () => {
         
         {/* User Info Card */}
         <div className="lg:col-span-4 space-y-6 h-fit">
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-8 flex flex-col items-center text-center">
-            <div className="w-24 h-24 bg-blue-50 rounded-full flex items-center justify-center text-blue-600 mb-4 border border-blue-100">
+          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 p-8 flex flex-col items-center text-center">
+            <div className="w-24 h-24 bg-indigo-50 rounded-full flex items-center justify-center text-indigo-600 mb-4 border border-indigo-100">
               <User className="w-10 h-10" />
             </div>
             <h2 className="text-lg font-semibold text-gray-900">{user?.name}</h2>
-            <p className="text-sm font-medium text-blue-600 mb-2 capitalize">{user?.role} Account</p>
+            <p className="text-sm font-medium text-indigo-600 mb-2 capitalize">{user?.role} Account</p>
             <div className="w-full h-px bg-gray-100 my-4"></div>
             <div className="flex items-center justify-center text-sm text-gray-500 w-full break-all px-2">
               <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
@@ -74,7 +74,7 @@ export const Profile = () => {
         <div className="lg:col-span-8 space-y-6 pb-10 overflow-y-auto pr-2">
           
           {/* Profile Information Form */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200">
             <div className="p-5 sm:p-6 border-b border-gray-100 flex items-center">
               <Settings className="w-5 h-5 mr-2 text-gray-400" />
               <h3 className="text-base font-semibold text-gray-900">Profile Information</h3>
@@ -89,7 +89,7 @@ export const Profile = () => {
                     required
                     value={profileData.name}
                     onChange={(e) => setProfileData({...profileData, name: e.target.value})}
-                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-indigo-500 focus:border-indigo-500" 
                     placeholder="Enter your full name"
                   />
                 </div>
@@ -101,7 +101,7 @@ export const Profile = () => {
                     required
                     value={profileData.email}
                     onChange={(e) => setProfileData({...profileData, email: e.target.value})}
-                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-indigo-500 focus:border-indigo-500" 
                     placeholder="Enter your email"
                   />
                 </div>
@@ -109,7 +109,7 @@ export const Profile = () => {
 
               <div className="pt-3 flex items-center justify-end">
                 {isProfileSaved && <span className="text-green-600 text-sm font-medium flex items-center mr-4"><CheckCircle className="w-4 h-4 mr-1.5"/> Saved</span>}
-                <button type="submit" className="bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 shadow-sm transition-colors">
+                <button type="submit" className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-indigo-700 shadow-sm transition-colors">
                   Save Changes
                 </button>
               </div>
@@ -117,7 +117,7 @@ export const Profile = () => {
           </div>
 
           {/* Change Password Form */}
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200">
+          <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200">
             <div className="p-5 sm:p-6 border-b border-gray-100 flex items-center">
               <Shield className="w-5 h-5 mr-2 text-gray-400" />
               <h3 className="text-base font-semibold text-gray-900">Change Password</h3>
@@ -129,7 +129,7 @@ export const Profile = () => {
                 <input 
                   {...register('currentPassword')} 
                   type="password" 
-                  className="w-full sm:max-w-md border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-blue-500 focus:border-blue-500" 
+                  className="w-full sm:max-w-md border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-indigo-500 focus:border-indigo-500" 
                   placeholder="Enter current password"
                 />
                 {errors.currentPassword && <p className="text-red-500 text-xs mt-1.5">{errors.currentPassword.message}</p>}
@@ -143,7 +143,7 @@ export const Profile = () => {
                   <input 
                     {...register('newPassword')} 
                     type="password" 
-                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-indigo-500 focus:border-indigo-500" 
                     placeholder="At least 6 characters"
                   />
                   {errors.newPassword && <p className="text-red-500 text-xs mt-1.5">{errors.newPassword.message}</p>}
@@ -154,7 +154,7 @@ export const Profile = () => {
                   <input 
                     {...register('confirmPassword')} 
                     type="password" 
-                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-blue-500 focus:border-blue-500" 
+                    className="w-full border-gray-300 rounded-lg shadow-sm text-sm p-2.5 border focus:ring-indigo-500 focus:border-indigo-500" 
                     placeholder="Type new password again"
                   />
                   {errors.confirmPassword && <p className="text-red-500 text-xs mt-1.5">{errors.confirmPassword.message}</p>}
@@ -163,7 +163,7 @@ export const Profile = () => {
 
               <div className="pt-3 flex items-center justify-end">
                 {isSaved && <span className="text-green-600 text-sm font-medium flex items-center mr-4"><CheckCircle className="w-4 h-4 mr-1.5"/> Password updated</span>}
-                <button type="submit" className="bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-blue-700 shadow-sm transition-colors">
+                <button type="submit" className="bg-indigo-600 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-indigo-700 shadow-sm transition-colors">
                   Update Password
                 </button>
               </div>

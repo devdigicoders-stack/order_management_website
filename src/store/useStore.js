@@ -17,8 +17,8 @@ export const useStore = create(
       ],
       productRequests: [],
       pendingProducts: [
-        { id: 1, model: 'ABC123', description: 'Gaming Chair', company: 'PREMIER', staffName: 'Ahmed', qty: 5, date: 'Today' },
-        { id: 2, model: 'XYZ789', description: 'Coffee Machine', company: 'MIDEA', staffName: 'Sarah', qty: 2, date: 'Today' },
+        { id: 1, model: 'ABC123', description: 'Gaming Chair', company: 'PREMIER', staffName: 'Rahul', qty: 5, date: 'Today' },
+        { id: 2, model: 'XYZ789', description: 'Coffee Machine', company: 'MIDEA', staffName: 'Neha', qty: 2, date: 'Today' },
       ],
 
       login: (email, role) => set({ user: { email, role, id: role === 'admin' ? 0 : 1, name: role === 'admin' ? 'Admin User' : 'Ahmed' } }),
@@ -159,7 +159,7 @@ export const useStore = create(
       })),
     }),
     {
-      name: 'oms-storage', // name of the item in the storage (must be unique)
+      name: 'oms-storage-v3', // name of the item in the storage (must be unique)
     }
   )
 );

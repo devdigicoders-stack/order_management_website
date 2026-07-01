@@ -37,17 +37,19 @@ export const Export = () => {
 
   return (
     <div className="space-y-6 max-w-5xl mx-auto md:h-full flex flex-col">
-      <div>
-        <h1 className="text-xl font-semibold text-gray-900">Export Purchase Order</h1>
-        <p className="text-gray-500 text-sm mt-1">Generate final purchase orders for suppliers.</p>
+      <div className="bg-gradient-to-r from-indigo-600 to-indigo-800 p-6 rounded-2xl shadow-sm text-white mb-2">
+        <h1 className="text-2xl font-bold text-white tracking-tight">Export Purchase Order</h1>
+        <p className="text-indigo-100 text-sm mt-1.5 opacity-90">Generate final purchase orders for suppliers.</p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:flex-1 md:min-h-0">
         
         {/* Settings */}
-        <div className="md:col-span-4 bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4 h-fit">
-          <h2 className="font-semibold text-gray-900 mb-4 flex items-center">
-            <FileText className="w-5 h-5 mr-2 text-blue-600" />
+        <div className="md:col-span-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-100 p-6 space-y-5 h-fit">
+          <h2 className="font-bold text-gray-900 mb-2 flex items-center text-lg">
+            <div className="p-2 bg-indigo-50 rounded-lg mr-3 shadow-inner">
+              <FileText className="w-5 h-5 text-indigo-600" />
+            </div>
             Export Settings
           </h2>
           <div>
@@ -55,31 +57,31 @@ export const Export = () => {
             <select 
               value={selectedCompany}
               onChange={(e) => setSelectedCompany(e.target.value)}
-              className="w-full border-gray-300 rounded-md shadow-sm text-sm p-2 border focus:ring-blue-500 focus:border-blue-500 bg-white"
+              className="w-full border-gray-300 rounded-md shadow-sm text-sm p-2 border focus:ring-indigo-500 focus:border-indigo-500 bg-white"
             >
               {companies.map(c => <option key={c} value={c}>{c}</option>)}
             </select>
           </div>
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">Format</label>
-            <select className="w-full border-gray-300 rounded-md shadow-sm text-sm p-2 border focus:ring-blue-500 focus:border-blue-500 bg-white">
+            <select className="w-full border-gray-300 rounded-md shadow-sm text-sm p-2 border focus:ring-indigo-500 focus:border-indigo-500 bg-white">
               <option value="pdf">PDF Document</option>
               <option value="excel">Excel (.xlsx)</option>
               <option value="csv">CSV File</option>
             </select>
           </div>
-          <div className="pt-4 mt-4 border-t border-gray-100">
-            <button className="w-full bg-blue-600 text-white px-4 py-3 rounded-md text-sm font-semibold hover:bg-blue-700 shadow-sm flex items-center justify-center">
+          <div className="pt-5 mt-2 border-t border-gray-100">
+            <button className="w-full bg-indigo-600 text-white px-4 py-3 rounded-lg text-sm font-semibold hover:bg-indigo-700 shadow-md flex items-center justify-center transition-transform hover:scale-105">
               <Download className="w-5 h-5 mr-2" /> Export to Supplier
             </button>
           </div>
         </div>
 
         {/* Preview */}
-        <div className="md:col-span-8 bg-white rounded-xl shadow-sm border border-gray-200 flex flex-col md:h-full min-h-[400px]">
-          <div className="p-4 border-b border-gray-200 bg-gray-50 flex justify-between items-center">
-            <h2 className="font-semibold text-gray-900">Preview</h2>
-            <span className="text-xs text-gray-500 uppercase tracking-wider font-semibold">{selectedCompany} PO</span>
+        <div className="md:col-span-8 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 border border-gray-200 flex flex-col md:h-full min-h-[400px]">
+          <div className="p-5 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white flex justify-between items-center rounded-t-xl">
+            <h2 className="font-bold text-gray-900 text-lg">Preview</h2>
+            <span className="text-[10px] text-indigo-700 bg-indigo-50 border border-indigo-100 px-2.5 py-1 rounded-full uppercase tracking-wider font-bold shadow-sm">{selectedCompany} PO</span>
           </div>
           
           <div className="p-4 md:p-10 bg-white flex-1 overflow-y-auto">

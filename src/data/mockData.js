@@ -1,16 +1,16 @@
 export const mockProducts = [
-  { id: 1, company: 'PREMIER', model: 'MW-6647', description: 'Microwave 0.7', cuft: 0.85 },
-  { id: 2, company: 'PREMIER', model: 'ED-6638', description: 'Kettle', cuft: 1.30 },
-  { id: 3, company: 'PREMIER', model: 'ED-7984GL', description: 'BLENDER', cuft: 1.25 },
-  { id: 4, company: 'MIDEA', model: 'NV-9472R2V181', description: '18 cuft fridge', cuft: 36.00 },
-  { id: 5, company: 'LG', model: 'WM-6791(B)', description: 'Wall mount', cuft: 8.50 },
+  { id: 1, company: 'PREMIER', model: 'IND-1001', description: 'Microwave 0.7', cuft: 0.85 },
+  { id: 2, company: 'PREMIER', model: 'IND-2022', description: 'Kettle', cuft: 1.30 },
+  { id: 3, company: 'PREMIER', model: 'IND-3005', description: 'BLENDER', cuft: 1.25 },
+  { id: 4, company: 'MIDEA', model: 'IND-4040', description: '18 cuft fridge', cuft: 36.00 },
+  { id: 5, company: 'LG', model: 'IND-5055', description: 'Wall mount', cuft: 8.50 },
 ];
 
 export const mockStaff = [
-  { id: 1, name: 'Ahmed' },
-  { id: 2, name: 'John' },
-  { id: 3, name: 'Ali' },
-  { id: 4, name: 'Sarah' },
+  { id: 1, name: 'Rahul' },
+  { id: 2, name: 'Amit' },
+  { id: 3, name: 'Priya' },
+  { id: 4, name: 'Neha' },
 ];
 
 export const mockOrders = [
