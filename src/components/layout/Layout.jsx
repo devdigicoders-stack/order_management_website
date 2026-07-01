@@ -49,7 +49,7 @@ export const Layout = () => {
     
     // Staff Flow
     { name: 'Dashboard', path: '/staff/dashboard', icon: LayoutDashboard, roles: ['staff'] },
-    { name: 'Create Order', path: '/orders', icon: PackagePlus, roles: ['admin', 'staff'] },
+    { name: 'Orders', path: '/orders', icon: PackagePlus, roles: ['admin', 'staff'] },
     { name: 'My Orders', path: '/staff/orders', icon: FileText, roles: ['staff'] },
     { name: 'Pending Items', path: '/staff/pending', icon: Clock, roles: ['staff'] },
     { name: 'Received Items', path: '/staff/received', icon: PackageCheck, roles: ['staff'] },
